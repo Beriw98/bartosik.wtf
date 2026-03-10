@@ -1,0 +1,92 @@
+---
+// What I Bring section - 4 cards in a grid
+const cards = [
+  {
+    icon: '⚙️',
+    titleKey: 'card1-title',
+    titleDefault: 'Backend architecture',
+    descKey: 'card1-desc',
+    descDefault: '40+ microservices, 5M+ requests/day, designed for scale.',
+  },
+  {
+    icon: '🤖',
+    titleKey: 'card2-title',
+    titleDefault: 'AI-powered workflow',
+    descKey: 'card2-desc',
+    descDefault: '30-40% faster delivery with Claude Code and AI-assisted development.',
+  },
+  {
+    icon: '🔍',
+    titleKey: 'card3-title',
+    titleDefault: 'Observability',
+    descKey: 'card3-desc',
+    descDefault: 'P99 latency tracking, distributed tracing across services.',
+  },
+  {
+    icon: '🧭',
+    titleKey: 'card4-title',
+    titleDefault: 'Senior review',
+    descKey: 'card4-desc',
+    descDefault: 'Code quality gates, architecture decisions, mentoring.',
+  },
+];
+---
+
+<section>
+  <p class="section-label" data-i18n="bring-label">What I bring</p>
+  <div class="cards">
+    {cards.map((card) => (
+      <div class="card">
+        <div class="card-icon">{card.icon}</div>
+        <div class="card-title" data-i18n={card.titleKey}>{card.titleDefault}</div>
+        <div class="card-desc" data-i18n={card.descKey}>{card.descDefault}</div>
+      </div>
+    ))}
+  </div>
+</section>
+
+<style>
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    margin-bottom: 1rem;
+  }
+
+  .card {
+    background: var(--surface);
+    padding: 1.5rem;
+    transition: background 0.2s;
+  }
+
+  .card:hover {
+    background: #161820;
+  }
+
+  .card-icon {
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .card-title {
+    font-family: var(--sans);
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--heading);
+    margin-bottom: 0.4rem;
+  }
+
+  .card-desc {
+    font-size: 0.8rem;
+    color: var(--subtle);
+    line-height: 1.6;
+  }
+
+  @media (max-width: 700px) {
+    .cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

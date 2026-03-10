@@ -1,0 +1,84 @@
+---
+// Availability section with 3-column block and note
+---
+
+<section>
+  <p class="section-label" data-i18n="avail-label">Availability</p>
+  <div class="avail-block">
+    <div class="avail-item">
+      <div class="avail-label" data-i18n="avail-slots">Open slots</div>
+      <div class="avail-value green" data-i18n="avail-slots-val">1-2 available</div>
+    </div>
+    <div class="avail-item">
+      <div class="avail-label" data-i18n="avail-when">When</div>
+      <div class="avail-value" data-i18n="avail-when-val">Evenings CET</div>
+    </div>
+    <div class="avail-item">
+      <div class="avail-label" data-i18n="avail-format">Format</div>
+      <div class="avail-value" data-i18n="avail-format-val">Remote · B2B</div>
+    </div>
+  </div>
+  <div class="avail-note">
+    <span class="avail-note-icon">✦</span>
+    <span data-i18n="avail-note">Open to <strong>ongoing contracts</strong> as well as <strong>one-off projects</strong></span>
+  </div>
+</section>
+
+<style>
+  .avail-block {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    padding: 1.5rem 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .avail-label {
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    color: var(--subtle);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 0.3rem;
+  }
+
+  .avail-value {
+    font-family: var(--mono);
+    font-size: 0.9rem;
+    color: var(--heading);
+  }
+
+  .avail-value.green {
+    color: var(--accent);
+  }
+
+  .avail-note {
+    margin-top: 1rem;
+    padding: 0.85rem 1.25rem;
+    background: rgba(74, 240, 160, 0.06);
+    border: 1px solid rgba(74, 240, 160, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-family: var(--mono);
+    font-size: 0.8rem;
+    color: var(--body);
+  }
+
+  .avail-note-icon {
+    color: var(--accent);
+  }
+
+  .avail-note :global(strong) {
+    color: var(--heading);
+  }
+
+  @media (max-width: 560px) {
+    .avail-block {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+  }
+</style>

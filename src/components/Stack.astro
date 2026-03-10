@@ -1,0 +1,48 @@
+---
+// Tech Stack section with primary and secondary tags
+const primaryTags = ['Go / Golang', 'Microservices', 'gRPC', 'GCP', 'React', 'Claude Code', 'AI-assisted dev'];
+const secondaryTags = ['PostgreSQL', 'Prometheus', 'Grafana', 'OpenTelemetry', 'GitLab CI', 'Docker', 'REST APIs', 'Kubernetes'];
+---
+
+<section id="stack">
+  <p class="section-label" data-i18n="stack-label">Tech stack</p>
+  <div class="tags">
+    {primaryTags.map((tag) => (
+      <span class="tag primary">{tag}</span>
+    ))}
+    {secondaryTags.map((tag) => (
+      <span class="tag">{tag}</span>
+    ))}
+  </div>
+</section>
+
+<style>
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .tag {
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--body);
+    padding: 0.35rem 0.75rem;
+    border-radius: 2px;
+    transition: border-color 0.2s, color 0.2s;
+  }
+
+  .tag:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  .tag.primary {
+    border-color: rgba(74, 240, 160, 0.3);
+    color: var(--accent);
+    background: rgba(74, 240, 160, 0.05);
+  }
+</style>

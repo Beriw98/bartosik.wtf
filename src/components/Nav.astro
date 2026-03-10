@@ -1,0 +1,109 @@
+---
+import LangSwitcher from './LangSwitcher.astro';
+---
+
+<nav>
+  <div class="container">
+    <span class="nav-logo">bartosik.wtf</span>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="#about" data-i18n="nav-about">About</a>
+        <a href="#stack" data-i18n="nav-stack">Stack</a>
+        <a href="#contact" data-i18n="nav-contact">Contact</a>
+      </div>
+      <span class="nav-badge">
+        <span class="badge-dot">●</span>
+        <span class="badge-text-full" data-i18n="available">available for contracts</span>
+        <span class="badge-text-short" data-i18n="available-short">available</span>
+      </span>
+      <LangSwitcher />
+    </div>
+  </div>
+</nav>
+
+<style>
+  nav {
+    border-bottom: 1px solid var(--border);
+    padding: 1.25rem 0;
+    position: sticky;
+    top: 0;
+    background: rgba(12, 13, 15, 0.88);
+    backdrop-filter: blur(12px);
+    z-index: 100;
+  }
+
+  nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .nav-logo {
+    font-family: var(--mono);
+    font-size: 0.8rem;
+    color: var(--accent);
+    letter-spacing: 0.05em;
+  }
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .nav-badge {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 0.25rem 0.65rem;
+    border-radius: 2px;
+    opacity: 0.7;
+  }
+
+  .badge-dot {
+    animation: blink 2s infinite;
+  }
+
+  .badge-text-short {
+    display: none;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 1.25rem;
+  }
+
+  .nav-links a {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    color: var(--subtle);
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover {
+    color: var(--accent);
+  }
+
+  @media (max-width: 600px) {
+    .nav-badge {
+      padding: 0.2rem 0.5rem;
+      font-size: 0.65rem;
+    }
+
+    .badge-text-full {
+      display: none;
+    }
+
+    .badge-text-short {
+      display: inline;
+    }
+
+    .nav-links {
+      display: none;
+    }
+  }
+</style>

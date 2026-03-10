@@ -1,0 +1,45 @@
+---
+// Footer with name and LinkedIn link
+---
+
+<footer>
+  <div class="container">
+    <span class="footer-left">Maciej Bartosik · Wrocław, PL</span>
+    <div class="footer-links">
+      <a href="https://linkedin.com/in/maciek-bartosik" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+<style>
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 1.5rem 0;
+  }
+
+  footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .footer-left {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    color: var(--subtle);
+  }
+
+  .footer-links a {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    color: var(--body);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover {
+    color: var(--accent);
+  }
+</style>

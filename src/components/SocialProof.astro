@@ -1,0 +1,111 @@
+---
+// Social proof section - companies and award
+const companies = [
+  { name: 'Nitrogen Wealth', url: 'https://nitrogenwealth.com' },
+  { name: 'Livechat Integrations', url: 'https://livechat-integrations.com' },
+  { name: 'nexos.ai', url: 'https://nexos.ai' },
+];
+---
+
+<div class="social-proof">
+  <div class="proof-companies">
+    <span class="proof-label" data-i18n="proof-label">Trusted by</span>
+    <div class="proof-names">
+      {companies.map((company, i) => (
+        <>
+          <a href={company.url} target="_blank" rel="noopener noreferrer" class="proof-company">{company.name}</a>
+          {i < companies.length - 1 && <span class="proof-sep">·</span>}
+        </>
+      ))}
+    </div>
+  </div>
+  <div class="proof-award">
+    <span class="award-icon">★</span>
+    <span class="award-text" data-i18n="proof-award">"Team of Leaders" award at Nitrogen</span>
+  </div>
+</div>
+
+<style>
+  .social-proof {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding: 1.25rem 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    margin: 2rem 0 0;
+    flex-wrap: wrap;
+  }
+
+  .proof-companies {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .proof-label {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    color: var(--body);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .proof-names {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .proof-company {
+    font-family: var(--mono);
+    font-size: 0.8rem;
+    color: var(--heading);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .proof-company:hover {
+    color: var(--accent);
+  }
+
+  .proof-sep {
+    color: var(--muted);
+  }
+
+  .proof-award {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 0.75rem;
+    background: rgba(74, 240, 160, 0.08);
+    border: 1px solid rgba(74, 240, 160, 0.2);
+    border-radius: 2px;
+  }
+
+  .award-icon {
+    color: var(--accent);
+    font-size: 0.75rem;
+  }
+
+  .award-text {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    color: var(--accent);
+  }
+
+  @media (max-width: 600px) {
+    .social-proof {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .proof-companies {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+  }
+</style>

@@ -1,0 +1,19 @@
+{
+  "name": "bartosik-wtf",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Personal portfolio website for Maciej Bartosik",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/netlify": "^7.0.0",
+    "astro": "^6.0.0"
+  }
+}

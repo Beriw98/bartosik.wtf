@@ -1,0 +1,65 @@
+---
+// About section with photo and bio paragraphs
+---
+
+<section id="about">
+  <p class="section-label" data-i18n="about-label">About</p>
+  <div class="about-grid">
+    <div>
+      <img src="/photo.jpg" alt="Maciek Bartosik" class="about-photo" />
+    </div>
+    <div class="about-text">
+      <p data-i18n="about-p1">
+        By day I work on a large distributed backend — <strong>microservices, gRPC, GCP, observability at scale</strong>. By night I'm building TutAll, a SaaS platform for tutors, which means I think about systems from both sides: engineering and product.
+      </p>
+      <p data-i18n="about-p2">
+        I'm an early adopter of <strong>AI-assisted development</strong> — I use Claude Code daily and actively promote that workflow across my team. In practice: faster delivery, fewer rabbit holes, better code.
+      </p>
+      <p data-i18n="about-p3">
+        If you have a backend challenge that needs senior attention — <strong>let's talk</strong>. I work best when I can own a problem end-to-end.
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about-grid {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+
+  .about-photo {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    object-position: center top;
+    filter: grayscale(15%);
+    border: 1px solid var(--border);
+    display: block;
+  }
+
+  .about-text p {
+    font-size: 0.95rem;
+    line-height: 1.85;
+    color: var(--body);
+    margin-bottom: 1rem;
+  }
+
+  .about-text p:last-child {
+    margin-bottom: 0;
+  }
+
+  .about-text :global(strong) {
+    color: var(--heading);
+    font-weight: 500;
+  }
+
+  @media (max-width: 600px) {
+    .about-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
+</style>

@@ -1,0 +1,57 @@
+---
+// Projects section - TutAll side project
+---
+
+<section>
+  <p class="section-label" data-i18n="projects-label">Building on the side</p>
+  <div class="project-row">
+    <div>
+      <div class="project-name">TutAll</div>
+      <div class="project-desc" data-i18n="tutall-desc">
+        SaaS platform for tutors — lesson management, AI transcription, payments. Built end-to-end: Go backend, React frontend.
+      </div>
+    </div>
+    <a href="https://tutall.app" target="_blank" rel="noopener noreferrer" class="project-link">tutall.app ↗</a>
+  </div>
+</section>
+
+<style>
+  .project-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border);
+    gap: 1rem;
+  }
+
+  .project-row:last-child {
+    border-bottom: none;
+  }
+
+  .project-name {
+    font-family: var(--mono);
+    font-size: 0.85rem;
+    color: var(--heading);
+  }
+
+  .project-desc {
+    font-size: 0.8rem;
+    color: var(--subtle);
+    margin-top: 0.15rem;
+  }
+
+  .project-link {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    color: var(--accent);
+    text-decoration: none;
+    white-space: nowrap;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+  }
+
+  .project-link:hover {
+    opacity: 1;
+  }
+</style>
